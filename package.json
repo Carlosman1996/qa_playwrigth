@@ -1,0 +1,22 @@
+{
+    "name": "playwright_play",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "cucumber:test:e2e": "cucumber-js --require cucumber.conf.js --require tests/e2e/stepDefinitions/**/*.js --format @cucumber/pretty-formatter",
+        "test:e2e": "npm run cucumber:test:e2e tests/e2e/features/*.feature",
+        "intercept:test:e2e": "npm run cucumber:test:e2e tests/e2e/features/intercept.feature",
+        "visualTesting:test:e2e": "npx playwright test tests/e2e/visualTesting.spec.js --ui"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "^7.3.1",
+        "@cucumber/pretty-formatter": "^1.0.0",
+        "@playwright/test": "^1.38.0",
+        "@types/node": "^20.6.2",
+        "playwright": "^1.38.0"
+    }
+}
